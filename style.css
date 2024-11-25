@@ -186,6 +186,27 @@
     }
 }
 
+@media (max-width: 409px) {
+    .counter-time .text-overlay-2 {
+        position: absolute;
+        top: 220%;
+    }
+}
+
+@media (max-width: 400px) {
+    .counter-time .text-overlay-2 {
+        position: absolute;
+        top: 240%;
+    }
+}
+
+@media (max-width: 390px) {
+    .counter-time .text-overlay-2 {
+        position: absolute;
+        top: 200%;
+    }
+}
+
 /* @media (max-width: 360px){
     .counter-time .text-overlay-2{
         position: relative;
