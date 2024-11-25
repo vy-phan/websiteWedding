@@ -207,6 +207,12 @@
     }
 }
 
+@media (max-width: 300px) {
+    .counter-time .text-overlay-2{
+        opacity: 0;
+    }
+}
+
 /* @media (max-width: 360px){
     .counter-time .text-overlay-2{
         position: relative;
