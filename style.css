@@ -1,0 +1,225 @@
+/* font */
+.gwendolyn-regular {
+    font-family: "Gwendolyn", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.gwendolyn-bold {
+    font-family: "Gwendolyn", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* trai tim roi */
+#heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.heart {
+    position: absolute;
+    font-size: 24px;
+    color: pink;
+    animation: fall 4s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) scale(1);
+        /* Trái tim bắt đầu trên màn hình */
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) scale(0.8);
+        /* Trái tim rơi xuống dưới */
+        opacity: 0;
+    }
+}
+
+/*  */
+
+
+
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.custom-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-image:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.counter-time .text-overlay-2 {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+
+.countdown-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: pink solid 5px;
+}
+
+.circle .value {
+    font-size: 48px;
+    font-weight: bold;
+    color: pink;
+}
+
+.circle .label {
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.carousel-item img {
+    position: relative;
+    transition: transform 0.3s ease;
+    /* Hiệu ứng mượt khi hover */
+    overflow: hidden;
+    /* Ẩn các phần thừa của ánh sáng */
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+    /* Phóng to ảnh nhẹ khi hover */
+}
+
+.carousel-item img::after {
+    content: '';
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2));
+    transform: rotate(45deg);
+    transition: none;
+    animation: shine 1s infinite;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.carousel-item img:hover::after {
+    opacity: 1;
+    /* Hiển thị ánh sáng khi hover */
+    animation: shine 2s linear forwards;
+    /* Kích hoạt hiệu ứng ánh sáng */
+}
+
+@keyframes shine {
+    0% {
+        top: -150%;
+        left: -150%;
+    }
+
+    100% {
+        top: 150%;
+        left: 150%;
+    }
+}
+
+@media (max-width: 600px) {
+    .circle {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .circle .value {
+        font-size: 38px;
+    }
+
+    .circle .label {
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 410px) {
+    .counter-time .text-overlay-2 {
+        position: absolute;
+        top: 190%;
+    }
+}
+
+/* @media (max-width: 360px){
+    .counter-time .text-overlay-2{
+        position: relative;
+    }
+} */
+
+
+
+/* music */
+.music-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /* Đảm bảo nút luôn nằm trên các phần tử khác */
+}
+
+.music-toggle-btn i {
+    font-size: 24px;
+}
+
+.music-toggle-btn:hover {
+    background-color: #ff80b0;
+}
+
+/*  */
+

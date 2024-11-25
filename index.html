@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Wedding</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- link css font family -->
+    <link href="https://fonts.cdnfonts.com/css/pretty" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- style="font-family: 'Pretty',sans-serif;" -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="heart-container"></div>
+    <audio id="background-music" loop>
+        <source src="./img/ngay.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="music-toggle" class="music-toggle-btn">
+        <i class="fas fa-pause"></i>
+    </button>
+
+    <div class="container">
+        <header class="row">
+            <img src="./img/2_.jpg" style="filter: brightness(60%);" class="img-fluid" width="100%" alt="">
+            <div class="text-overlay">
+                <p style="font-family: 'Pretty',sans-serif;font-size: 28px;">We are getting married.</p>
+                <!-- <p class="text-center ">INVITE YOU</p> -->
+                <h1 style="font-family: Brush Script MT;font-size: 35px;">
+                    Đinh Hán Trung
+                    &
+                    Trần Huệ Nghi
+                </h1>
+                <p style="font-family: Brush Script MT;font-size: 30px;">10 December 2024</p>
+            </div>
+        </header>
+
+        <!-- menu -->
+        <div class="row">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <span style="font-family: Brush Script MT;">T</span>
+                        <span class="text-white text-center"
+                            style="width: 40px;height: 40px; background-color: pink;border-radius: 50%;display: inline-block;">&</span>
+                        <span style="font-family: Brush Script MT;">N</span>
+                    </a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#couple-menu">Cặp đôi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#ablum-menu">Album Hình Cưới</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#credit-menu">Mừng cưới</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#location-menu">Địa điểm</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+        <main>
+            <!-- cap doi -->
+            <div class="row py-3" id="couple-menu" style="background-color: #f1f1f1;">
+                <div class="col-md-6 col-sm-12 text-center mb-4">
+                    <img src="./img/husband.jpg" alt="Liu Cẩm Bình" class="img-fluid rounded-circle mb-3" width="300px"
+                        style="border: pink solid 10px;">
+                    <h3 class="fw-bold text-muted">Đinh Hán Trung</h3>
+                    <p class="px-4">
+                        Là giảng viên với bộ môn CSDL. Là 1 người thầy nhiệt huyết, có tâm với sinh viên.
+                        Luôn đưa các lời khuyên, phương án phù hợp nhất với quan điểm chia sẻ từ 1 người đã
+                        đi trước
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-12 text-center mb-4">
+                    <img src="./img/bride.jpg" alt="Dương Quang Huy" class="img-fluid rounded-circle mb-3" width="300px"
+                        style="border: pink solid 10px;">
+                    <h3 class="fw-bold text-muted">Trần Huệ Nghi</h3>
+                    <p class="px-4">
+                        Từng học Đại Học Bách Khoa- Đại học Quốc gia TP.HCM. Có nghiệm làm web fullstack hơn
+                        30 năm kinh nghiệm. Là 1 người thầy vui tính ,luôn luôn tận tình chỉ sinh viên tận
+                        tình. Đặc biệt sinh viên NỮ
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- count  -->
+            <div class="row counter-time">
+                <img src="./img/16.jpg" class="img-fluid" style="filter: brightness(80%);" alt="">
+                <div class="text-overlay-2">
+                    <h1 class="text-center" style="font-family: Brush Script MT;font-size: 40px;">Counting the seconds
+                        for the big day!</h1>
+                    <div class="countdown-container">
+                        <div class="circle">
+                            <span class="value" id="days">00</span>
+                            <span class="label text-dark ">Ngày</span>
+                        </div>
+                        <div class="circle">
+                            <span class="value" id="hours">00</span>
+                            <span class="label text-dark ">Giờ</span>
+                        </div>
+                        <div class="circle">
+                            <span class="value" id="minutes">00</span>
+                            <span class="label text-dark ">Phút</span>
+                        </div>
+                        <div class="circle">
+                            <span class="value" id="seconds">00</span>
+                            <span class="label text-dark ">Giây</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ablum anh cuoi -->
+            <div class="row my-4" id="ablum-menu">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/1_.jpg" alt="Image 1" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/3.jpg" alt="Image 1" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/5.jpg" alt="Image 1" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/6.jpg" alt="Image 2" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/7.jpg" alt="Image 2" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/8.jpg" alt="Image 1" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/9.jpg" alt="Image 2" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/15.jpg" alt="Image 1" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/16.jpg" alt="Image 2" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/17.jpg" alt="Image 1" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/20.jpg" alt="Image 2" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/22.jpg" alt="Image 1" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/23.jpg" alt="Image 2" class="custom-image lazy-image">
+                        </div>
+                        <div class="col-md-6 mb-4 col-6">
+                            <img src="./img/21.jpg" alt="Image 2" class="custom-image lazy-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row " id="location-menu" style="background-color: #f1f1f1;">
+                <div class="col-sm-12 my-5 d-flex mx-auto" style="max-width: 400px;">
+                    <div class="card">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5542506746947!2d106.63743670000001!3d10.768795900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e99047e88fb%3A0x1cfc9a1e105d9708!2zTmjDoCBow6BuZyBUaOG7p3kgVOG6oSDEkOG6p20gU2Vu!5e0!3m2!1svi!2s!4v1732449987476!5m2!1svi!2s"
+                            width="100%" height="300vh" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="card-body">
+                            <h4 class="card-title text-muted text-center">NHÀ HÀNG THỦY TẠ ĐẦM SEN</h4>
+                            <p class="card-text text-center">19:00 10/12/2024</p>
+                            <p class="card-text text-center">3 Hòa Bình, Phường 3, Quận 11,TP. Hồ Chí Minh </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/10.jpg" class="d-block w-100" alt="./img/">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/11.jpg" class="d-block w-100" alt="./img/">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/4.jpg" class="d-block w-100" alt="./img/">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row " id="credit-menu" style="background-color: #fff7fc;">
+                <h1 class="gwendolyn-bold text-center fw-bold pt-4 mt-4" style="font-size: 40px;">Hộp mừng cưới</h1>
+                <p class="my-2 text-center">Thật vui vì được gặp và đón tiếp các bạn trong một dịp đặc biệt như đám cưới của chúng tôi.</p>
+                <div class="col-sm-12 p-5 " >
+                    <div class="card shadow">
+                        <img class="card-img-top"
+                            src="https://images.viblo.asia/2b174eac-50bd-40c0-91c8-bbecab2093b5.png" alt="Title" />
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Ngân hàng: TECHCOMBANK</h4>
+                            <p class="card-text text-center">Tên tài khoản: Tran Gia Nghi</p>
+                            <p class="card-text text-center">Số tài khoản: 000000000000</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+
+    </main>
+    <footer class="row py-5">
+        <h1 class="gwendolyn-bold text-center" style="font-size: 50x;">
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>谢谢大家!
+            <br>
+            <span class="py-1"> 百年好合 <i class="fa-solid fa-heart" style="color: #fdafe1;"></i></span>
+        </h1>
+
+    </footer>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date("2024-12-10T19:00:00"); // Ngày 10/12/2024, 6 giờ tối
+            const currentDate = new Date();
+            const diff = targetDate - currentDate;
+
+            if (diff <= 0) {
+                document.getElementById("days").textContent = "0";
+                document.getElementById("hours").textContent = "0";
+                document.getElementById("minutes").textContent = "0";
+                document.getElementById("seconds").textContent = "0";
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+
+        function createHeart() {
+            const heartContainer = document.getElementById("heart-container");
+            const heart = document.createElement("i");
+
+            // Sử dụng biểu tượng Font Awesome
+            heart.classList.add("heart", "fas", "fa-heart");
+
+            // Đặt vị trí trái tim ngẫu nhiên theo chiều ngang
+            heart.style.left = Math.random() * 100 + "vw";
+
+            // Đặt kích thước ngẫu nhiên cho trái tim
+            const size = Math.random() * 20 + 20; // Kích thước từ 20px đến 40px
+            heart.style.fontSize = size + "px";
+
+            // Đặt màu ngẫu nhiên cho trái tim
+            const colors = ["#FF6B6B", "#FF8E72", "#FFB88C", "#FF5C93"];
+            heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+
+            // Tốc độ rơi ngẫu nhiên
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+
+            heartContainer.appendChild(heart);
+
+            // Loại bỏ trái tim khi rơi ra khỏi màn hình
+            setTimeout(() => {
+                heart.remove();
+            }, 5000); // Sau 5 giây
+        }
+
+        // Tạo trái tim sau mỗi khoảng thời gian ngẫu nhiên
+        setInterval(createHeart, 800);
+
+        // Get the audio element and the button
+        const music = document.getElementById("background-music");
+        const musicToggleButton = document.getElementById("music-toggle");
+
+        // Flag to check if music is playing or paused
+        let isMusicPlaying = false;
+
+        // Function to start the music (ensure that the user interacts first)
+        function startMusic() {
+            // Play the music when the user clicks the button for the first time
+            music.play().then(() => {
+                isMusicPlaying = true;
+                musicToggleButton.innerHTML = '<i class="fas fa-pause"></i>'; // Change button to pause icon
+            }).catch(error => {
+                console.log("Error playing the music:", error); // Handle any errors with autoplay
+            });
+        }
+
+        // Add event listener to the button to toggle music
+        musicToggleButton.addEventListener("click", () => {
+            if (!isMusicPlaying) {
+                startMusic(); 
+            } else {
+                music.pause(); 
+                musicToggleButton.innerHTML = '<i class="fas fa-play"></i>'; 
+                isMusicPlaying = false; 
+            }
+        });
+
+
+        
+
+    </script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
