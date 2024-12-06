@@ -29,7 +29,7 @@
 
     <div class="container">
         <header class="row">
-            <img src="./img/2.webp" style="filter: brightness(60%);" class="img-fluid " width="100%" alt="">
+            <img src="./img/backGround.webp" style="filter: brightness(60%);" class="img-fluid " width="100%" alt="">
             <div class="text-overlay row">
                 <p style="font-family: 'Pretty',sans-serif;font-size: 28px;">We are getting married.</p>
                 <h1 style="font-family: 'Lobster', cursive;" id="text-name">
@@ -107,9 +107,11 @@
             <div class="row counter-time">
                 <img src="./img/16.webp" class="img-fluid" style="filter: brightness(80%);" alt="">
                 <div class="text-overlay-2">
-                    <h1 class="text-center" style="font-family: 'Dancing Script', cursive;font-size: 40px;">Counting the
+                    <h1 class="text-center" style="font-family: 'Dancing Script', cursive;font-size: 40px;">
+                        Counting the
                         seconds
-                        for the big day!</h1>
+                        for the big day!
+                    </h1>
                     <div class="countdown-container">
                         <div class="circle">
                             <span class="value" id="days">00</span>
@@ -233,7 +235,7 @@
                 <div class="col-sm-12 p-5 ">
                     <div class="card shadow">
                         <img class="card-img-top"
-                            src="./img/qrCodeBankWife.webp" loading="lazy" alt="Title" />
+                            src="./img/qrCodeBankWife.webp" class="lazy-image" loading="lazy" alt="Title" />
                         <div class="card-body">
                             <h4 class="card-title text-center">Ngân hàng: ACB</h4>
                             <p class="card-text text-center">Tên tài khoản: HAN TRUNG DINH</p>
@@ -244,7 +246,7 @@
                 <div class="col-sm-12 p-5 ">
                     <div class="card shadow">
                         <img class="card-img-top"
-                            src="./img/qrCodeBankWife.webp" loading="lazy" alt="Title" />
+                            src="./img/qrCodeBankWife.webp" class="lazy-image" loading="lazy" alt="Title" />
                         <div class="card-body">
                             <h4 class="card-title text-center">Ngân hàng: ACB</h4>
                             <p class="card-text text-center">Tên tài khoản: TRAN HUE NGHI</p>
@@ -267,95 +269,14 @@
     </footer>
     </div>
 
-    <script>
-        function updateCountdown() {
-            const targetDate = new Date("2024-12-10T19:00:00"); // Ngày 10/12/2024, 6 giờ tối
-            const currentDate = new Date();
-            const diff = targetDate - currentDate;
-
-            if (diff <= 0) {
-                document.getElementById("days").textContent = "0";
-                document.getElementById("hours").textContent = "0";
-                document.getElementById("minutes").textContent = "0";
-                document.getElementById("seconds").textContent = "0";
-                return;
-            }
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById("days").textContent = days;
-            document.getElementById("hours").textContent = hours;
-            document.getElementById("minutes").textContent = minutes;
-            document.getElementById("seconds").textContent = seconds;
-        }
-
-        setInterval(updateCountdown, 1000);
-
-        function createHeart() {
-            const heartContainer = document.getElementById("heart-container");
-            const heart = document.createElement("i");
-            heart.classList.add("heart", "fas", "fa-heart");
-            heart.style.left = Math.random() * 100 + "vw";
-            const size = Math.random() * 20 + 20;
-            heart.style.fontSize = size + "px";
-
-            const colors = ["#FF6B6B", "#FF8E72", "#FFB88C", "#FF5C93"];
-            heart.style.color = colors[Math.floor(Math.random() * colors.length)];
-
-            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
-
-            heartContainer.appendChild(heart);
-            setTimeout(() => {
-                heart.remove();
-            }, 5000);
-        }
-        setInterval(createHeart, 800);
-
-
-        const music = document.getElementById("background-music");
-        const musicToggleButton = document.getElementById("music-toggle");
-
-        const musicList = [
-            "./img/roiii.mp3",
-            "./img/loveu.mp3",
-            "./img/wd.mp3"
-        ];
-
-        let isMusicPlaying = false;
-        function getRandomMusic() {
-            const randomIndex = Math.floor(Math.random() * musicList.length);
-            return musicList[randomIndex];
-        }
-
-        function startMusic() {
-            const randomMusic = getRandomMusic(); 
-            music.src = randomMusic;
-            music.play().then(() => {
-                isMusicPlaying = true;
-                musicToggleButton.innerHTML = '<i class="fas fa-pause"></i>';
-            }).catch(error => {
-                console.log("Error playing the music:", error);
-            });
-        }
-        musicToggleButton.addEventListener("click", () => {
-            if (!isMusicPlaying) {
-                startMusic(); 
-            } else {
-                music.pause(); 
-                musicToggleButton.innerHTML = '<i class="fas fa-play"></i>';
-                isMusicPlaying = false;
-            }
-        });
-
-
-
-
+    <script defer>
+       function updateCountdown(){const targetDate=new Date("2024-12-10T19:00:00");const currentDate=new Date();const diff=targetDate-currentDate;if(diff<=0){document.getElementById("days").textContent="0";document.getElementById("hours").textContent="0";document.getElementById("minutes").textContent="0";document.getElementById("seconds").textContent="0";return}
+const days=Math.floor(diff/(1000*60*60*24));const hours=Math.floor((diff%(1000*60*60*24))/(1000*60*60));const minutes=Math.floor((diff%(1000*60*60))/(1000*60));const seconds=Math.floor((diff%(1000*60))/1000);document.getElementById("days").textContent=days;document.getElementById("hours").textContent=hours;document.getElementById("minutes").textContent=minutes;document.getElementById("seconds").textContent=seconds}
+setInterval(updateCountdown,1000);function createHeart(){const heartContainer=document.getElementById("heart-container");const heart=document.createElement("i");heart.classList.add("heart","fas","fa-heart");heart.style.left=Math.random()*100+"vw";const size=Math.random()*20+20;heart.style.fontSize=size+"px";const colors=["#FF6B6B","#FF8E72","#FFB88C","#FF5C93"];heart.style.color=colors[Math.floor(Math.random()*colors.length)];heart.style.animationDuration=Math.random()*2+3+"s";heartContainer.appendChild(heart);setTimeout(()=>{heart.remove()},5000)}
+setInterval(createHeart,800);const music=document.getElementById("background-music");const musicToggleButton=document.getElementById("music-toggle");const musicList=["./img/roiii.mp3","./img/loveu.mp3","./img/wd.mp3"];let isMusicPlaying=!1;function getRandomMusic(){const randomIndex=Math.floor(Math.random()*musicList.length);return musicList[randomIndex]}
+function startMusic(){const randomMusic=getRandomMusic();music.src=randomMusic;music.play().then(()=>{isMusicPlaying=!0;musicToggleButton.innerHTML='<i class="fas fa-pause"></i>'}).catch(error=>{console.log("Error playing the music:",error)})}
+musicToggleButton.addEventListener("click",()=>{if(!isMusicPlaying){startMusic()}else{music.pause();musicToggleButton.innerHTML='<i class="fas fa-play"></i>';isMusicPlaying=!1}})
     </script>
-
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
